@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Подключение к MongoDB
 mongoose.connect('mongodb+srv://in7264:gfhjkm7264@nyotvali0.x8murab.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true });

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('/register', {
+      const response = await fetch('http://localhost:3000/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
       console.log(result.message);
 
-      // Optionally, you can redirect to another page after successful registration
-      // window.location.href = '/success'; // Change '/success' to the desired URL
+      // По желанию, после успешной регистрации можно перенаправить пользователя на другую страницу
+      // window.location.href = '/success'; // Измените '/success' на требуемый URL
     } catch (error) {
-      console.error('Error during registration:', error.message);
+      console.error('Ошибка во время регистрации:', error.message);
     }
   });
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('/login', {
+      const response = await fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
       console.log(result.message);
 
-      // Optionally, you can redirect to another page after successful login
-      // window.location.href = '/dashboard'; // Change '/dashboard' to the desired URL
+      // По желанию, после успешного входа можно перенаправить пользователя на другую страницу
+      // window.location.href = '/dashboard'; // Измените '/dashboard' на требуемый URL
     } catch (error) {
-      console.error('Error during login:', error.message);
+      console.error('Ошибка во время входа:', error.message);
     }
   });
 });

@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/register', {
+      const response = await fetch('https://enchanting-beijinho-83abcf.netlify.app/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://enchanting-beijinho-83abcf.netlify.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

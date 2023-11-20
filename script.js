@@ -51,7 +51,7 @@ function saveUserDataLocally(username, password) {
 
 function sendToGitHub(username, password) {
     // Это пример. Не храните токен на стороне клиента в реальном приложении!
-    const githubToken = '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';
+    const githubToken = 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;
 
     const data = {
         username: username,

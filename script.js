@@ -51,12 +51,14 @@ function saveUserDataLocally(username, password) {
 
 function sendToGitHub(username, password) {
     // Это пример. Не храните токен на стороне клиента в реальном приложении!
-    const githubToken = 'ВАШ_ТОКЕН';
+    const githubToken = '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';
 
     const data = {
         username: username,
         password: password,
     };
+
+    const content = btoa(JSON.stringify(data));
 
     fetch('https://api.github.com/repos/in7264/miadiplom/contents/users.json', {
         method: 'PUT',
@@ -66,7 +68,7 @@ function sendToGitHub(username, password) {
         },
         body: JSON.stringify({
             message: 'Добавление данных пользователя',
-            content: btoa(JSON.stringify(data)),
+            content: content,
         }),
     })
     .then(response => response.json())
@@ -77,4 +79,3 @@ function sendToGitHub(username, password) {
         console.error('Ошибка при отправке данных на GitHub:', error);
     });
 }
-

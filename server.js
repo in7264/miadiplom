@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3000; // Используйте переменную окружения PORT, если она существует
 
 // Подключение к MongoDB
-mongoose.connect('mongodb+srv://in7264:gfhjkm7264@nyotvali0.x8murab.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true, ssl: true });
+mongoose.connect('mongodb+srv://in7264:gfhjkm7264@nyotvali0.x8murab.mongodb.net/', { ssl: true });
 
 // Создание схемы для пользователя
 const userSchema = new mongoose.Schema({
